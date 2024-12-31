@@ -13,14 +13,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function Home() {
-  const categories = [
-    'Birthday Special Decors',
-    'Candlelight Dinners',
-    'Birthday Cakes',
-    'Birthday Surprises',
-    'Couple Activities',
-  ];
-
   const [filters, setFilters] = useState({
     categories: [] as string[],
   });
@@ -75,7 +67,7 @@ export default function Home() {
                   to
                 </h2>
                 <h1 className="text-4xl md:text-4xl font-light text-[#1E1E1E]">
-                  celebrate your <span className=" font-bold">Birthday Party</span>
+                  celebrate your <span className="font-bold">Birthday Party</span>
                 </h1>
                 
               </div>
@@ -264,7 +256,7 @@ export default function Home() {
               <SwiperSlide key={testimonial.id}>
                 <div className="bg-white p-8 rounded-lg h-full">
                   <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 relative rounded-full overflow-hidden">

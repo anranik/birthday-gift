@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { ServiceCard as ServiceCardType } from '@/services/mockData';
 
 interface ServiceCardProps {
@@ -6,6 +7,12 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ card }: ServiceCardProps) {
+  const router = useRouter();
+
+  const handleContact = () => {
+    router.push(`/service/${card.id}`);
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="relative">
@@ -74,6 +81,7 @@ export default function ServiceCard({ card }: ServiceCardProps) {
 
         <button 
           className="w-full text-center py-3 bg-pink-50 text-pink-500 rounded-lg hover:bg-pink-100 transition-colors font-medium mt-4"
+          onClick={handleContact}
         >
           CONTACT NOW
         </button>
